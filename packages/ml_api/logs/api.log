@@ -1,0 +1,232 @@
+2022-10-02 18:38:57,721 — api.app — ERROR —log_exception:1741 — Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/marcotulio/Documents/git/flask_api/packages/ml_api/api/controller.py", line 18, in home
+    return render_template('home.html')
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/marcotulio/Documents/git/flask_api/packages/ml_api/api/templates/home.html", line 20, in top-level template code
+    <form action="{{ url_for('predict/regression')}}"method="post">
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'predict/regression'. Did you mean 'prediction_app.version' instead?
+2022-10-02 18:40:09,985 — api.app — ERROR —log_exception:1741 — Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/marcotulio/Documents/git/flask_api/packages/ml_api/api/controller.py", line 18, in home
+    return render_template('home.html')
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/marcotulio/Documents/git/flask_api/packages/ml_api/api/templates/home.html", line 20, in top-level template code
+    <form action="{{ url_for('predict')}}"method="post">
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'predict'. Did you mean 'prediction_app.home' instead?
+2022-10-02 18:40:14,362 — api.app — ERROR —log_exception:1741 — Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/marcotulio/Documents/git/flask_api/packages/ml_api/api/controller.py", line 18, in home
+    return render_template('home.html')
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/marcotulio/Documents/git/flask_api/packages/ml_api/api/templates/home.html", line 20, in top-level template code
+    <form action="{{ url_for('predict')}}"method="post">
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'predict'. Did you mean 'prediction_app.home' instead?
+2022-10-02 18:40:23,806 — api.app — ERROR —log_exception:1741 — Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/marcotulio/Documents/git/flask_api/packages/ml_api/api/controller.py", line 18, in home
+    return render_template('home.html')
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/marcotulio/Documents/git/flask_api/packages/ml_api/api/templates/home.html", line 20, in top-level template code
+    <form action="{{ url_for('predict')}}"method="post">
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'predict'. Did you mean 'prediction_app.home' instead?
+2022-10-02 18:40:29,587 — api.app — ERROR —log_exception:1741 — Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/marcotulio/Documents/git/flask_api/packages/ml_api/api/controller.py", line 18, in home
+    return render_template('home.html')
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/marcotulio/Documents/git/flask_api/packages/ml_api/api/templates/home.html", line 20, in top-level template code
+    <form action="{{ url_for('predict')}}"method="post">
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'predict'. Did you mean 'prediction_app.home' instead?
+2022-10-02 18:49:45,961 — api.app — ERROR —log_exception:1741 — Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/marcotulio/Documents/git/flask_api/packages/ml_api/api/controller.py", line 18, in home
+    return render_template('home.html')
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/marcotulio/Documents/git/flask_api/packages/ml_api/api/templates/home.html", line 20, in top-level template code
+    <form action="{{ url_for('predict')}}"method="post">
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'predict'. Did you mean 'prediction_app.home' instead?
+2022-10-02 18:50:50,664 — api.app — ERROR —log_exception:1741 — Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/marcotulio/Documents/git/flask_api/packages/ml_api/api/controller.py", line 18, in home
+    return render_template('home.html')
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/marcotulio/Documents/git/flask_api/packages/ml_api/api/templates/home.html", line 20, in top-level template code
+    <form action="{{ url_for('predict')}}"method="post">
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'predict'. Did you mean 'prediction_app.home' instead?
+2022-10-02 18:56:33,351 — api.app — ERROR —log_exception:1741 — Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/marcotulio/Documents/git/flask_api/packages/ml_api/api/controller.py", line 18, in home
+    return render_template('home.html')
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/marcotulio/Documents/git/flask_api/packages/ml_api/api/templates/home.html", line 20, in top-level template code
+    <form action="{{ url_for('predict')}}"method="post">
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/flask/app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/Users/marcotulio/Documents/git/flask_api/env/lib/python3.8/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'predict'. Did you mean 'prediction_app.home' instead?
