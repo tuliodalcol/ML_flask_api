@@ -12,7 +12,7 @@ prediction_app = Blueprint('prediction_app', __name__)
 TEST = 'test'
 
 
-@prediction_app.route("/")
+@prediction_app.route("/", methods=['GET', 'POST'])
 def home():
     _logger.info('Home page')
     return render_template('home.html')
@@ -47,30 +47,28 @@ def predict_api():
 
 @prediction_app.route('/predict', methods=['POST'])
 def predict():
-    if request.method == 'POST':
-        # Step 1: Extract POST data from request body as JSON
-        json_data = request.get_json()
-        _logger.info(f'Inputs: {json_data}')
+    # Step 1: Extract POST data from request body as JSON
+    json_data = request.get_json()
+    _logger.info(f'Inputs: {json_data}')
+    print('Call Endpoint', json_data)
+    # Step 2: Validate the input using marshmallow schema
+    #input_data, errors = validate_inputs(input_data=json_data)
 
-        # Step 2: Validate the input using marshmallow schema
-        #input_data, errors = validate_inputs(input_data=json_data)
+    # DATA TRANSFORMATION - load trasnformers
 
-        # DATA TRANSFORMATION - load trasnformers
+    # Step 3: Model prediction
+    # NOT NEEDED MAYBE  print(np.array(list(json_data.values())).reshape(1,-1))
+    #result = make_prediction(input_data=input_data)
+    #_logger.debug(f'Outputs: {result}')
 
-        # Step 3: Model prediction
-        # NOT NEEDED MAYBE  print(np.array(list(json_data.values())).reshape(1,-1))
-        #result = make_prediction(input_data=input_data)
-        #_logger.debug(f'Outputs: {result}')
+    # Step 4: Convert numpy ndarray to list
+    #predictions = result.get('predictions').tolist()
+    #version = result.get('version')
 
-        # Step 4: Convert numpy ndarray to list
-        #predictions = result.get('predictions').tolist()
-        #version = result.get('version')
-
-        # Step 5: Return the response as JSON
-        #return jsonify({'predictions': json_data,
-        #                'version': TEST,
-        #                'errors': TEST})
-        return render_template(
-            "home.html",
-            prediction_text="Water price is")# {}".format(json_data))
+    # Step 5: Return the response as JSON
+    #return jsonify({'predictions': json_data,
+    #                'version': TEST,
+    #                'errors': TEST})
+    return json_data
+        
 

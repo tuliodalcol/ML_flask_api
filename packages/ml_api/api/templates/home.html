@@ -5,29 +5,51 @@
   <meta charset="UTF-8">
   <title>ML API</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 </head>
-
 <body>
- <div class="login">
-	<h1>Danone Water Price prediction</h1>
+  <script type="text/javascript">
 
-     <!-- Input For Receiving Query to the ML -->
-    <form action="{{ url_for('prediction_app.predict')}}"method="post">
-        <input type="text" name="Ipc_index" placeholder="Ipc_index" required="required" /><br>
-        
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
+    let myJson = '0'
+    const formatInputs = () => {
+      data = document.getElementById('formInput').value
+      let data_dict = {};
+      data_dict["json_data"] = data
+      json_data = JSON.stringify(data_dict)
+      return json_data
+    }
 
-   <br>
-   <br>
+    const callEndpoint = async () => {
+      json_data = formatInputs();
+      const response = await fetch("http://127.0.0.1:5000/predict", {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+        body: json_data
+      })
+        myJson = await response.json();
+        document.getElementById("fooHolder").innerHTML = myJson.json_data;
+    }
+
+  </script>
+
+  <div class="login">
+    <h1>Danone Water Price prediction</h1>
   
-   
- </div>
- {{prediction_text}}
-
-</body>
+       <!-- Input For Receiving Query to the ML -->
+      <form id="formElem" onsubmit="return false">
+          <label for="json_data">Enter the IPC Index:</label>
+          <input id="formInput" type="text" name="json_data" value="" placeholder="Ipc_index" required="required" /><br>
+          <button value="Predict!" class="btn btn-primary btn-block btn-large" onclick="callEndpoint();">Predict</button>
+      </form>
+  
+     <br>
+     
+   </div>
+   <div id="showValue">IPC Index: <p id="fooHolder"></div>
+  </body>
 </html>
